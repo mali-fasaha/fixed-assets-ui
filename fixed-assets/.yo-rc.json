@@ -1,0 +1,136 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "io.github.assets"
+    },
+    "jhipsterVersion": "6.4.1",
+    "applicationType": "gateway",
+    "baseName": "fixedAssets",
+    "packageName": "io.github.assets",
+    "packageFolder": "io/github/assets",
+    "serverPort": "12011",
+    "authenticationType": "uaa",
+    "uaaBaseName": "fixedAssetsUaa",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": "kafka",
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "materia",
+    "clientThemeVariant": "light",
+    "testFrameworks": [
+      "gatling",
+      "cucumber",
+      "protractor"
+    ],
+    "jhiPrefix": "gha",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-nav-element",
+        "version": "2.1.10"
+      },
+      {
+        "name": "generator-jhipster-docker",
+        "version": "2.5.0"
+      },
+      {
+        "name": "generator-jhipster-primeng",
+        "version": "3.0.0"
+      },
+      {
+        "name": "generator-jhipster-standalone-profile",
+        "version": "2.3.0"
+      },
+      {
+        "name": "generator-jhipster-swagger-cli",
+        "version": "3.0.1"
+      },
+      {
+        "name": "generator-jhipster-spring-cloud-stream",
+        "version": "1.0.0"
+      },
+      {
+        "name": "generator-jhipster-primeng-charts",
+        "version": "1.2.0"
+      },
+      {
+        "name": "generator-jhipster-audit-helper",
+        "version": "1.0.3"
+      },
+      {
+        "name": "generator-jhipster-testcontainers",
+        "version": "1.0.0"
+      },
+      {
+        "name": "generator-jhipster-stripe-payment",
+        "version": "1.0.9"
+      },
+      {
+        "name": "generator-jhipster-paypal",
+        "version": "1.0.5"
+      },
+      {
+        "name": "generator-jhipster-quota",
+        "version": "1.0.3"
+      },
+      {
+        "name": "generator-jhipster-angular-material-integration",
+        "version": "1.0.17"
+      },
+      {
+        "name": "generator-jhipster-uaa-security-authority",
+        "version": "1.0.1"
+      },
+      {
+        "name": "generator-jhipster-administration-database",
+        "version": "1.0.4"
+      },
+      {
+        "name": "generator-jhipster-database-backup",
+        "version": "1.0.7"
+      },
+      {
+        "name": "generator-jhipster-feign-client",
+        "version": "1.0.6"
+      },
+      {
+        "name": "generator-jhipster-jgitver",
+        "version": "0.1.0"
+      },
+      {
+        "name": "generator-jhipster-obfuscation-at-rest",
+        "version": "0.3.0"
+      },
+      {
+        "name": "generator-jhipster-social-login-api",
+        "version": "0.0.1"
+      },
+      {
+        "name": "generator-jhipster-blockchain",
+        "version": "0.0.1"
+      },
+      {
+        "name": "generator-jhipster-aeropost",
+        "version": "1.14.0"
+      },
+      {
+        "name": "generator-jhipster-file2url",
+        "version": "0.0.0"
+      }
+    ],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}

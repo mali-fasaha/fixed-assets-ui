@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.github.assets</groupId>
+    <artifactId>fixed-assets-sys</artifactId>
+    <version>0.0.1</version>
+    <packaging>pom</packaging>
+    <name>Fixed Assets System</name>
+
+    <modules>
+        <module>fixed-assets</module>
+        <module>fixed-asset-uaa</module>
+        <module>fixed-asset-service</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.github.jhipster</groupId>
+                <artifactId>jhipster-dependencies</artifactId>
+                <version>${jhipster-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- jhipster-needle-maven-add-dependency-management -->
+        </dependencies>
+    </dependencyManagement>
+
+</project>
