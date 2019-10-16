@@ -1,7 +1,8 @@
 {
   "generator-jhipster": {
     "promptValues": {
-      "packageName": "io.github.assets"
+      "packageName": "io.github.assets",
+      "microservicePath": "../fixed-asset-service"
     },
     "jhipsterVersion": "6.4.1",
     "applicationType": "gateway",
