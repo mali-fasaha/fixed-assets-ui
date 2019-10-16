@@ -44,6 +44,13 @@ import { RouterModule } from '@angular/router';
         path: 'fixed-asset-invoice',
         loadChildren: () =>
           import('./fixedAssetService/fixed-asset-invoice/fixed-asset-invoice.module').then(m => m.FixedAssetServiceFixedAssetInvoiceModule)
+      },
+      {
+        path: 'depreciation-regime',
+        loadChildren: () =>
+          import('./fixedAssetService/depreciation-regime/depreciation-regime.module').then(
+            m => m.FixedAssetServiceDepreciationRegimeModule
+          )
       }
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ])
