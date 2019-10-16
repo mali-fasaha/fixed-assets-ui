@@ -63,6 +63,13 @@ import { RouterModule } from '@angular/router';
       {
         path: 'file-upload',
         loadChildren: () => import('./fixedAssetService/file-upload/file-upload.module').then(m => m.FixedAssetServiceFileUploadModule)
+      },
+      {
+        path: 'fixed-asset-assessment',
+        loadChildren: () =>
+          import('./fixedAssetService/fixed-asset-assessment/fixed-asset-assessment.module').then(
+            m => m.FixedAssetServiceFixedAssetAssessmentModule
+          )
       }
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ])
