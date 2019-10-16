@@ -23,6 +23,27 @@ import { RouterModule } from '@angular/router';
         path: 'asset-transaction',
         loadChildren: () =>
           import('./fixedAssetService/asset-transaction/asset-transaction.module').then(m => m.FixedAssetServiceAssetTransactionModule)
+      },
+      {
+        path: 'capital-work-in-progress',
+        loadChildren: () =>
+          import('./fixedAssetService/capital-work-in-progress/capital-work-in-progress.module').then(
+            m => m.FixedAssetServiceCapitalWorkInProgressModule
+          )
+      },
+      {
+        path: 'cwip-transfer',
+        loadChildren: () =>
+          import('./fixedAssetService/cwip-transfer/cwip-transfer.module').then(m => m.FixedAssetServiceCwipTransferModule)
+      },
+      {
+        path: 'dealer',
+        loadChildren: () => import('./fixedAssetService/dealer/dealer.module').then(m => m.FixedAssetServiceDealerModule)
+      },
+      {
+        path: 'fixed-asset-invoice',
+        loadChildren: () =>
+          import('./fixedAssetService/fixed-asset-invoice/fixed-asset-invoice.module').then(m => m.FixedAssetServiceFixedAssetInvoiceModule)
       }
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ])
