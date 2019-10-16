@@ -92,6 +92,13 @@ import { RouterModule } from '@angular/router';
         path: 'service-outlet',
         loadChildren: () =>
           import('./fixedAssetService/service-outlet/service-outlet.module').then(m => m.FixedAssetServiceServiceOutletModule)
+      },
+      {
+        path: 'transaction-approval',
+        loadChildren: () =>
+          import('./fixedAssetService/transaction-approval/transaction-approval.module').then(
+            m => m.FixedAssetServiceTransactionApprovalModule
+          )
       }
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ])
