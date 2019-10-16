@@ -34,5 +34,6 @@
     "entityTableName": "message_token",
     "databaseType": "sql",
     "jpaMetamodelFiltering": false,
-    "pagination": "pagination"
+    "pagination": "pagination",
+    "microserviceName": "fixedAssetService"
 }

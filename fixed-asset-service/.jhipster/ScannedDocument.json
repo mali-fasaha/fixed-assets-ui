@@ -40,5 +40,6 @@
     "entityTableName": "scanned_document",
     "databaseType": "sql",
     "jpaMetamodelFiltering": true,
-    "pagination": "pagination"
+    "pagination": "pagination",
+    "microserviceName": "fixedAssetService"
 }

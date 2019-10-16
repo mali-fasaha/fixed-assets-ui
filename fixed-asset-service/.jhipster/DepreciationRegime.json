@@ -30,5 +30,6 @@
     "entityTableName": "depreciation_regime",
     "databaseType": "sql",
     "jpaMetamodelFiltering": true,
-    "pagination": "pagination"
+    "pagination": "pagination",
+    "microserviceName": "fixedAssetService"
 }

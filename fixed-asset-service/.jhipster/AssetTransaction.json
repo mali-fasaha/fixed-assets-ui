@@ -33,5 +33,6 @@
     "entityTableName": "asset_transaction",
     "databaseType": "sql",
     "jpaMetamodelFiltering": true,
-    "pagination": "pagination"
+    "pagination": "pagination",
+    "microserviceName": "fixedAssetService"
 }

@@ -72,5 +72,6 @@
     "entityTableName": "fixed_asset_assessment",
     "databaseType": "sql",
     "jpaMetamodelFiltering": true,
-    "pagination": "pagination"
+    "pagination": "pagination",
+    "microserviceName": "fixedAssetService"
 }

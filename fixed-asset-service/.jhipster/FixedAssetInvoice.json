@@ -47,5 +47,6 @@
     "entityTableName": "fixed_asset_invoice",
     "databaseType": "sql",
     "jpaMetamodelFiltering": true,
-    "pagination": "pagination"
+    "pagination": "pagination",
+    "microserviceName": "fixedAssetService"
 }
