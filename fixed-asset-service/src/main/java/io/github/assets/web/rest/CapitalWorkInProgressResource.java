@@ -39,7 +39,7 @@ public class CapitalWorkInProgressResource {
 
     private final Logger log = LoggerFactory.getLogger(CapitalWorkInProgressResource.class);
 
-    private static final String ENTITY_NAME = "fixedAssetsCapitalWorkInProgress";
+    private static final String ENTITY_NAME = "fixedAssetServiceCapitalWorkInProgress";
 
     @Value("${jhipster.clientApp.name}")
     private String applicationName;

@@ -1,6 +1,6 @@
 package io.github.assets.cucumber;
 
-import io.github.assets.FixedAssetsApp;
+import io.github.assets.FixedAssetServiceApp;
 import io.cucumber.java.Before;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
@@ -8,7 +8,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 @SpringBootTest
 @WebAppConfiguration
-@ContextConfiguration(classes = FixedAssetsApp.class)
+@ContextConfiguration(classes = FixedAssetServiceApp.class)
 public class CucumberContextConfiguration {
 
     @Before

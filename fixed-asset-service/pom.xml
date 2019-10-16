@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.assets</groupId>
-    <artifactId>fixed-assets</artifactId>
+    <artifactId>fixed-asset-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>Fixed Assets</name>
+    <name>Fixed Asset Service</name>
 
     <repositories>
         <!-- jhipster-needle-maven-repository -->
@@ -645,7 +645,7 @@
                             <image>adoptopenjdk:11-jre-hotspot</image>
                         </from>
                         <to>
-                            <image>fixedassets:latest</image>
+                            <image>fixedassetservice:latest</image>
                         </to>
                         <container>
                             <entrypoint>
@@ -673,9 +673,9 @@
                         <changeLogFile>${project.basedir}/src/main/resources/config/liquibase/master.xml</changeLogFile>
                         <diffChangeLogFile>${project.basedir}/src/main/resources/config/liquibase/changelog/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
                         <driver>org.postgresql.Driver</driver>
-                        <url>jdbc:postgresql://localhost:5432/fixedAssets</url>
+                        <url>jdbc:postgresql://localhost:5432/fixedAssetService</url>
                         <defaultSchemaName></defaultSchemaName>
-                        <username>fixedAssets</username>
+                        <username>fixedAssetService</username>
                         <password></password>
                         <referenceUrl>hibernate:spring:io.github.assets.domain?dialect=org.hibernate.dialect.PostgreSQL95Dialect&amp;hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&amp;hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy</referenceUrl>
                         <verbose>true</verbose>
@@ -888,7 +888,7 @@
                                 <skipValidateSpec>false</skipValidateSpec>
                                 <configOptions>
                                     <delegatePattern>true</delegatePattern>
-                                    <title>fixed-assets</title>
+                                    <title>fixed-asset-service</title>
                                 </configOptions>
                             </configuration>
                         </execution>

@@ -1,6 +1,6 @@
 package io.github.assets.config.timezone;
 
-import io.github.assets.FixedAssetsApp;
+import io.github.assets.FixedAssetServiceApp;
 import io.github.assets.config.SecurityBeanOverrideConfiguration;
 import io.github.assets.repository.timezone.DateTimeWrapper;
 import io.github.assets.repository.timezone.DateTimeWrapperRepository;
@@ -21,7 +21,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * Integration tests for the UTC Hibernate configuration.
  */
-@SpringBootTest(classes = {SecurityBeanOverrideConfiguration.class, FixedAssetsApp.class})
+@SpringBootTest(classes = {SecurityBeanOverrideConfiguration.class, FixedAssetServiceApp.class})
 public class HibernateTimeZoneIT {
 
     @Autowired

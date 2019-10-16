@@ -37,7 +37,7 @@ public class MessageTokenResource {
 
     private final Logger log = LoggerFactory.getLogger(MessageTokenResource.class);
 
-    private static final String ENTITY_NAME = "fixedAssetsMessageToken";
+    private static final String ENTITY_NAME = "fixedAssetServiceMessageToken";
 
     @Value("${jhipster.clientApp.name}")
     private String applicationName;

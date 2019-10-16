@@ -39,7 +39,7 @@ public class CwipTransferResource {
 
     private final Logger log = LoggerFactory.getLogger(CwipTransferResource.class);
 
-    private static final String ENTITY_NAME = "fixedAssetsCwipTransfer";
+    private static final String ENTITY_NAME = "fixedAssetServiceCwipTransfer";
 
     @Value("${jhipster.clientApp.name}")
     private String applicationName;

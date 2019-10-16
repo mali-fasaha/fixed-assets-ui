@@ -1,6 +1,6 @@
 package io.github.assets.web.rest;
 
-import io.github.assets.FixedAssetsApp;
+import io.github.assets.FixedAssetServiceApp;
 import io.github.assets.config.SecurityBeanOverrideConfiguration;
 import io.github.assets.domain.MessageToken;
 import io.github.assets.repository.MessageTokenRepository;
@@ -38,7 +38,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * Integration tests for the {@link MessageTokenResource} REST controller.
  */
-@SpringBootTest(classes = {SecurityBeanOverrideConfiguration.class, FixedAssetsApp.class})
+@SpringBootTest(classes = {SecurityBeanOverrideConfiguration.class, FixedAssetServiceApp.class})
 public class MessageTokenResourceIT {
 
     private static final String DEFAULT_DESCRIPTION = "AAAAAAAAAA";

@@ -1,6 +1,6 @@
 package io.github.assets.web.rest;
 
-import io.github.assets.FixedAssetsApp;
+import io.github.assets.FixedAssetServiceApp;
 import io.github.assets.config.SecurityBeanOverrideConfiguration;
 import io.github.assets.domain.FileType;
 import io.github.assets.repository.FileTypeRepository;
@@ -41,7 +41,7 @@ import io.github.assets.domain.enumeration.FileModelType;
 /**
  * Integration tests for the {@link FileTypeResource} REST controller.
  */
-@SpringBootTest(classes = {SecurityBeanOverrideConfiguration.class, FixedAssetsApp.class})
+@SpringBootTest(classes = {SecurityBeanOverrideConfiguration.class, FixedAssetServiceApp.class})
 public class FileTypeResourceIT {
 
     private static final String DEFAULT_FILE_TYPE_NAME = "AAAAAAAAAA";

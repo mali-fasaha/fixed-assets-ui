@@ -1,6 +1,6 @@
 package io.github.assets.web.rest;
 
-import io.github.assets.FixedAssetsApp;
+import io.github.assets.FixedAssetServiceApp;
 import io.github.assets.config.SecurityBeanOverrideConfiguration;
 import io.github.assets.domain.DepreciationRegime;
 import io.github.assets.repository.DepreciationRegimeRepository;
@@ -43,7 +43,7 @@ import io.github.assets.domain.enumeration.AssetDecayType;
 /**
  * Integration tests for the {@link DepreciationRegimeResource} REST controller.
  */
-@SpringBootTest(classes = {SecurityBeanOverrideConfiguration.class, FixedAssetsApp.class})
+@SpringBootTest(classes = {SecurityBeanOverrideConfiguration.class, FixedAssetServiceApp.class})
 public class DepreciationRegimeResourceIT {
 
     private static final AssetDecayType DEFAULT_ASSET_DECAY_TYPE = AssetDecayType.STRAIGHT_LINE;

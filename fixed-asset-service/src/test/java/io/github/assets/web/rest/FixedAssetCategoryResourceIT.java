@@ -1,6 +1,6 @@
 package io.github.assets.web.rest;
 
-import io.github.assets.FixedAssetsApp;
+import io.github.assets.FixedAssetServiceApp;
 import io.github.assets.config.SecurityBeanOverrideConfiguration;
 import io.github.assets.domain.FixedAssetCategory;
 import io.github.assets.repository.FixedAssetCategoryRepository;
@@ -42,7 +42,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * Integration tests for the {@link FixedAssetCategoryResource} REST controller.
  */
-@SpringBootTest(classes = {SecurityBeanOverrideConfiguration.class, FixedAssetsApp.class})
+@SpringBootTest(classes = {SecurityBeanOverrideConfiguration.class, FixedAssetServiceApp.class})
 public class FixedAssetCategoryResourceIT {
 
     private static final String DEFAULT_CATEGORY_NAME = "AAAAAAAAAA";

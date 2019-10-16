@@ -1,6 +1,6 @@
 version: '2'
 services:
-  fixedassets-hazelcast-management-center:
+  fixedassetservice-hazelcast-management-center:
     image: hazelcast/management-center:3.12.5
     ports:
       - 8180:8080

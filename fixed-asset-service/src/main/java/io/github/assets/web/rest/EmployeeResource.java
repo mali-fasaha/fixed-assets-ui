@@ -39,7 +39,7 @@ public class EmployeeResource {
 
     private final Logger log = LoggerFactory.getLogger(EmployeeResource.class);
 
-    private static final String ENTITY_NAME = "fixedAssetsEmployee";
+    private static final String ENTITY_NAME = "fixedAssetServiceEmployee";
 
     @Value("${jhipster.clientApp.name}")
     private String applicationName;

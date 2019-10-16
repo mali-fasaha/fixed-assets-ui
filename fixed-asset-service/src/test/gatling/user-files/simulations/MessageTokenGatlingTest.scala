@@ -36,7 +36,7 @@ class MessageTokenGatlingTest extends Simulation {
         "Accept" -> """application/json"""
     )
 
-    val authorization_header = "Basic " + Base64.getEncoder.encodeToString("fixedAssetsapp:bXktc2VjcmV0LXRva2VuLXRvLWNoYW5nZS1pbi1wcm9kdWN0aW9uLWFuZC10by1rZWVwLWluLWEtc2VjdXJlLXBsYWNl".getBytes(StandardCharsets.UTF_8))
+    val authorization_header = "Basic " + Base64.getEncoder.encodeToString("fixedAssetServiceapp:bXktc2VjcmV0LXRva2VuLXRvLWNoYW5nZS1pbi1wcm9kdWN0aW9uLWFuZC10by1rZWVwLWluLWEtc2VjdXJlLXBsYWNl".getBytes(StandardCharsets.UTF_8))
 
     val headers_http_authentication = Map(
         "Content-Type" -> """application/x-www-form-urlencoded""",
@@ -64,7 +64,7 @@ class MessageTokenGatlingTest extends Simulation {
         .formParam("grant_type", "password")
         .formParam("scope", "read write")
         .formParam("client_secret", "bXktc2VjcmV0LXRva2VuLXRvLWNoYW5nZS1pbi1wcm9kdWN0aW9uLWFuZC10by1rZWVwLWluLWEtc2VjdXJlLXBsYWNl")
-        .formParam("client_id", "fixedAssetsapp")
+        .formParam("client_id", "fixedAssetServiceapp")
         .formParam("submit", "Login")
         .check(jsonPath("$.access_token").saveAs("access_token"))).exitHereIfFailed
         .pause(2)
@@ -75,12 +75,12 @@ class MessageTokenGatlingTest extends Simulation {
         .pause(10)
         .repeat(2) {
             exec(http("Get all messageTokens")
-            .get("/services/fixedassets/api/message-tokens")
+            .get("/services/fixedassetservice/api/message-tokens")
             .headers(headers_http_authenticated)
             .check(status.is(200)))
             .pause(10 seconds, 20 seconds)
             .exec(http("Create new messageToken")
-            .post("/services/fixedassets/api/message-tokens")
+            .post("/services/fixedassetservice/api/message-tokens")
             .headers(headers_http_authenticated)
             .body(StringBody("""{
                 "id":null
@@ -94,12 +94,12 @@ class MessageTokenGatlingTest extends Simulation {
             .pause(10)
             .repeat(5) {
                 exec(http("Get created messageToken")
-                .get("/services/fixedassets${new_messageToken_url}")
+                .get("/services/fixedassetservice${new_messageToken_url}")
                 .headers(headers_http_authenticated))
                 .pause(10)
             }
             .exec(http("Delete created messageToken")
-            .delete("/services/fixedassets${new_messageToken_url}")
+            .delete("/services/fixedassetservice${new_messageToken_url}")
             .headers(headers_http_authenticated))
             .pause(10)
         }

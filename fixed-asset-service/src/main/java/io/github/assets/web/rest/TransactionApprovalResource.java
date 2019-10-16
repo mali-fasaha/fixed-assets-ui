@@ -39,7 +39,7 @@ public class TransactionApprovalResource {
 
     private final Logger log = LoggerFactory.getLogger(TransactionApprovalResource.class);
 
-    private static final String ENTITY_NAME = "fixedAssetsTransactionApproval";
+    private static final String ENTITY_NAME = "fixedAssetServiceTransactionApproval";
 
     @Value("${jhipster.clientApp.name}")
     private String applicationName;

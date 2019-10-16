@@ -39,7 +39,7 @@ public class AssetDepreciationResource {
 
     private final Logger log = LoggerFactory.getLogger(AssetDepreciationResource.class);
 
-    private static final String ENTITY_NAME = "fixedAssetsAssetDepreciation";
+    private static final String ENTITY_NAME = "fixedAssetServiceAssetDepreciation";
 
     @Value("${jhipster.clientApp.name}")
     private String applicationName;

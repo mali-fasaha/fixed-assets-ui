@@ -1,6 +1,6 @@
 package io.github.assets.web.rest;
 
-import io.github.assets.FixedAssetsApp;
+import io.github.assets.FixedAssetServiceApp;
 import io.github.assets.config.SecurityBeanOverrideConfiguration;
 import io.github.assets.domain.Dealer;
 import io.github.assets.domain.FixedAssetInvoice;
@@ -44,7 +44,7 @@ import io.github.assets.domain.enumeration.TitleTypes;
 /**
  * Integration tests for the {@link DealerResource} REST controller.
  */
-@SpringBootTest(classes = {SecurityBeanOverrideConfiguration.class, FixedAssetsApp.class})
+@SpringBootTest(classes = {SecurityBeanOverrideConfiguration.class, FixedAssetServiceApp.class})
 public class DealerResourceIT {
 
     private static final TitleTypes DEFAULT_TITLE = TitleTypes.DR;

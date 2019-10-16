@@ -39,7 +39,7 @@ public class FixedAssetInvoiceResource {
 
     private final Logger log = LoggerFactory.getLogger(FixedAssetInvoiceResource.class);
 
-    private static final String ENTITY_NAME = "fixedAssetsFixedAssetInvoice";
+    private static final String ENTITY_NAME = "fixedAssetServiceFixedAssetInvoice";
 
     @Value("${jhipster.clientApp.name}")
     private String applicationName;

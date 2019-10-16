@@ -5,7 +5,7 @@
     },
     "jhipsterVersion": "6.4.1",
     "applicationType": "microservice",
-    "baseName": "fixedAssets",
+    "baseName": "fixedAssetService",
     "packageName": "io.github.assets",
     "packageFolder": "io/github/assets",
     "serverPort": "595959",
@@ -22,7 +22,7 @@
     "serviceDiscoveryType": "eureka",
     "buildTool": "maven",
     "enableSwaggerCodegen": true,
-    "jwtSecretKey": "MTE2MDU3ZTU2Mjg1YjRjM2E5YTczZmVkOGI4NTJkZDZiODJjMDNkYjQ5ZjhmMDQxMTE4ZWQyNmVhNjQzY2ZmODliODc1ZmVjYjIwYTI2OTMzMzdkZTg5ODI2MjlhZjNlNDAzNzQ0ODlhODc3NzczOWIzOGVmOTQzZmE1NWZhNDc=",
+    "jwtSecretKey": "MDlkZmIyOTFhNzQ0Yjk5ZTAxMDlmNWViOTY3N2JhZTZhOGZhYjZhMDRiZTQzOWRiN2YwYzg0MjhjYWNmMmFkZmE3MTk0MDA4NWZlZGJlMDliZWMxOWY4MjU5MjNmYzkyZmE2M2I5ODM0ZTE2NmNkNDFkNDc0NTRlODBlNTU1MDU=",
     "embeddableLaunchScript": false,
     "testFrameworks": [
       "gatling",
@@ -69,10 +69,6 @@
         "version": "1.0.3"
       },
       {
-        "name": "generator-jhipster-angular-material-integration",
-        "version": "1.0.17"
-      },
-      {
         "name": "generator-jhipster-uaa-security-authority",
         "version": "1.0.1"
       },
@@ -89,8 +85,20 @@
         "version": "1.0.6"
       },
       {
+        "name": "generator-jhipster-jgitver",
+        "version": "0.1.0"
+      },
+      {
         "name": "generator-jhipster-obfuscation-at-rest",
         "version": "0.3.0"
+      },
+      {
+        "name": "generator-jhipster-social-login-api",
+        "version": "0.0.1"
+      },
+      {
+        "name": "generator-jhipster-file2url",
+        "version": "0.0.0"
       }
     ],
     "enableTranslation": false,

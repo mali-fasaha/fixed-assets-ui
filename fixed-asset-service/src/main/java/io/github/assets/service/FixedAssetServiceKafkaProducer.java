@@ -8,17 +8,17 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Service
-public class FixedAssetsKafkaProducer {
+public class FixedAssetServiceKafkaProducer {
 
-    private final Logger log = LoggerFactory.getLogger(FixedAssetsKafkaProducer.class);
+    private final Logger log = LoggerFactory.getLogger(FixedAssetServiceKafkaProducer.class);
 
-    private static final String TOPIC = "topic_fixedassets";
+    private static final String TOPIC = "topic_fixedassetservice";
 
     private KafkaProperties kafkaProperties;
 
     private KafkaProducer<String, String> kafkaProducer;
 
-    public FixedAssetsKafkaProducer(KafkaProperties kafkaProperties) {
+    public FixedAssetServiceKafkaProducer(KafkaProperties kafkaProperties) {
         this.kafkaProperties = kafkaProperties;
     }
 

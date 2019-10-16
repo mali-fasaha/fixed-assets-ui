@@ -39,7 +39,7 @@ public class FileUploadResource {
 
     private final Logger log = LoggerFactory.getLogger(FileUploadResource.class);
 
-    private static final String ENTITY_NAME = "fixedAssetsFileUpload";
+    private static final String ENTITY_NAME = "fixedAssetServiceFileUpload";
 
     @Value("${jhipster.clientApp.name}")
     private String applicationName;

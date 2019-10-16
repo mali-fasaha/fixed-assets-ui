@@ -1,6 +1,6 @@
 version: '2'
 services:
-  fixedassets-sonar:
+  fixedassetservice-sonar:
     image: sonarqube:7.9.1-community
     ports:
       - 9001:9000

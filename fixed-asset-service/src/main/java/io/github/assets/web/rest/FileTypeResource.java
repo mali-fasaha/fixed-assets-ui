@@ -37,7 +37,7 @@ public class FileTypeResource {
 
     private final Logger log = LoggerFactory.getLogger(FileTypeResource.class);
 
-    private static final String ENTITY_NAME = "fixedAssetsFileType";
+    private static final String ENTITY_NAME = "fixedAssetServiceFileType";
 
     @Value("${jhipster.clientApp.name}")
     private String applicationName;

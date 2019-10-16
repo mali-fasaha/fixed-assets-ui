@@ -62,13 +62,13 @@ public class CacheConfiguration implements DisposableBean {
     @Bean
     public HazelcastInstance hazelcastInstance(JHipsterProperties jHipsterProperties) {
         log.debug("Configuring Hazelcast");
-        HazelcastInstance hazelCastInstance = Hazelcast.getHazelcastInstanceByName("fixedAssets");
+        HazelcastInstance hazelCastInstance = Hazelcast.getHazelcastInstanceByName("fixedAssetService");
         if (hazelCastInstance != null) {
             log.debug("Hazelcast already initialized");
             return hazelCastInstance;
         }
         Config config = new Config();
-        config.setInstanceName("fixedAssets");
+        config.setInstanceName("fixedAssetService");
         config.getNetworkConfig().getJoin().getMulticastConfig().setEnabled(false);
         if (this.registration == null) {
             log.warn("No discovery service is set up, Hazelcast cannot create a cluster.");

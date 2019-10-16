@@ -38,7 +38,7 @@ public class ScannedDocumentResource {
 
     private final Logger log = LoggerFactory.getLogger(ScannedDocumentResource.class);
 
-    private static final String ENTITY_NAME = "fixedAssetsScannedDocument";
+    private static final String ENTITY_NAME = "fixedAssetServiceScannedDocument";
 
     @Value("${jhipster.clientApp.name}")
     private String applicationName;

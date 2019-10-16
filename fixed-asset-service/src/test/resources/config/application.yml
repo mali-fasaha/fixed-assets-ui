@@ -17,15 +17,15 @@ eureka:
   client:
     enabled: false
   instance:
-    appname: fixedAssets
-    instanceId: fixedAssets:${spring.application.instance-id:${random.value}}
+    appname: fixedAssetService
+    instanceId: fixedAssetService:${spring.application.instance-id:${random.value}}
 
 spring:
   application:
-    name: fixedAssets
+    name: fixedAssetService
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:mem:fixedAssets;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MULTI_THREADED=FALSE
+    url: jdbc:h2:mem:fixedAssetService;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MULTI_THREADED=FALSE
     name:
     username:
     password:
@@ -67,13 +67,13 @@ spring:
       enabled: false
   task:
     execution:
-      thread-name-prefix: fixed-assets-task-
+      thread-name-prefix: fixed-asset-service-task-
       pool:
         core-size: 1
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: fixed-assets-scheduling-
+      thread-name-prefix: fixed-asset-service-scheduling-
       pool:
         size: 1
   thymeleaf:
@@ -91,7 +91,7 @@ server:
 
 jhipster:
   clientApp:
-    name: 'fixedAssetsApp'
+    name: 'fixedAssetServiceApp'
   logging:
     # To test json console appender
     use-json-format: true # By default, logs are in Json format
@@ -104,7 +104,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-        base64-secret: MTE2MDU3ZTU2Mjg1YjRjM2E5YTczZmVkOGI4NTJkZDZiODJjMDNkYjQ5ZjhmMDQxMTE4ZWQyNmVhNjQzY2ZmODliODc1ZmVjYjIwYTI2OTMzMzdkZTg5ODI2MjlhZjNlNDAzNzQ0ODlhODc3NzczOWIzOGVmOTQzZmE1NWZhNDc=
+        base64-secret: MDlkZmIyOTFhNzQ0Yjk5ZTAxMDlmNWViOTY3N2JhZTZhOGZhYjZhMDRiZTQzOWRiN2YwYzg0MjhjYWNmMmFkZmE3MTk0MDA4NWZlZGJlMDliZWMxOWY4MjU5MjNmYzkyZmE2M2I5ODM0ZTE2NmNkNDFkNDc0NTRlODBlNTU1MDU=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
     client-authorization:
@@ -121,7 +121,7 @@ kafka:
     key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
     value.deserializer: org.apache.kafka.common.serialization.StringDeserializer
     bootstrap.servers: ${kafkaBootstrapServers}
-    group.id: fixed-assets
+    group.id: fixed-asset-service
     auto.offset.reset: earliest
   producer:
     key.serializer: org.apache.kafka.common.serialization.StringSerializer

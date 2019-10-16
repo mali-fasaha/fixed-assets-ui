@@ -4,8 +4,8 @@ import io.github.assets.client.OAuth2InterceptedFeignConfiguration;
 import io.github.assets.config.ApplicationProperties;
 import io.github.assets.config.DefaultProfileUtil;
 
-import io.github.assets.service.FixedAssetsKafkaConsumer;
-import io.github.assets.service.FixedAssetsKafkaProducer;
+import io.github.assets.service.FixedAssetServiceKafkaConsumer;
+import io.github.assets.service.FixedAssetServiceKafkaProducer;
 import org.springframework.context.ConfigurableApplicationContext;
 import io.github.jhipster.config.JHipsterConstants;
 
@@ -33,18 +33,18 @@ import java.util.Collection;
 @SpringBootApplication
 @EnableConfigurationProperties({LiquibaseProperties.class, ApplicationProperties.class})
 @EnableDiscoveryClient
-public class FixedAssetsApp implements InitializingBean {
+public class FixedAssetServiceApp implements InitializingBean {
 
-    private static final Logger log = LoggerFactory.getLogger(FixedAssetsApp.class);
+    private static final Logger log = LoggerFactory.getLogger(FixedAssetServiceApp.class);
 
     private final Environment env;
 
-    public FixedAssetsApp(Environment env) {
+    public FixedAssetServiceApp(Environment env) {
         this.env = env;
     }
 
     /**
-     * Initializes fixedAssets.
+     * Initializes fixedAssetService.
      * <p>
      * Spring profiles can be configured with a program argument --spring.profiles.active=your-active-profile
      * <p>
@@ -69,11 +69,11 @@ public class FixedAssetsApp implements InitializingBean {
      * @param args the command line arguments.
      */
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(FixedAssetsApp.class);
+        SpringApplication app = new SpringApplication(FixedAssetServiceApp.class);
         DefaultProfileUtil.addDefaultProfile(app);
         ConfigurableApplicationContext applicationContext = app.run(args);
-        applicationContext.getBean(FixedAssetsKafkaProducer.class).init();
-        applicationContext.getBean(FixedAssetsKafkaConsumer.class).start();
+        applicationContext.getBean(FixedAssetServiceKafkaProducer.class).init();
+        applicationContext.getBean(FixedAssetServiceKafkaConsumer.class).start();
         Environment env = applicationContext.getEnvironment();
         logApplicationStartup(env);
     }

@@ -14,19 +14,19 @@ import java.util.Collections;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 @Service
-public class FixedAssetsKafkaConsumer {
+public class FixedAssetServiceKafkaConsumer {
 
-    private final Logger log = LoggerFactory.getLogger(FixedAssetsKafkaConsumer.class);
+    private final Logger log = LoggerFactory.getLogger(FixedAssetServiceKafkaConsumer.class);
 
     private final AtomicBoolean closed = new AtomicBoolean(false);
 
-    public static final String TOPIC = "topic_fixedassets";
+    public static final String TOPIC = "topic_fixedassetservice";
 
     private final KafkaProperties kafkaProperties;
 
     private KafkaConsumer<String, String> kafkaConsumer;
 
-    public FixedAssetsKafkaConsumer(KafkaProperties kafkaProperties) {
+    public FixedAssetServiceKafkaConsumer(KafkaProperties kafkaProperties) {
         this.kafkaProperties = kafkaProperties;
     }
 

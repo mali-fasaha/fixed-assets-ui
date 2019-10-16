@@ -1,7 +1,7 @@
 {
-  "name": "fixed-assets",
+  "name": "fixed-asset-service",
   "version": "0.0.0",
-  "description": "Description for fixedAssets",
+  "description": "Description for fixedAssetService",
   "private": true,
   "license": "UNLICENSED",
   "cacheDirectories": [
@@ -17,12 +17,14 @@
     "generator-jhipster-stripe-payment": "1.0.9",
     "generator-jhipster-paypal": "1.0.5",
     "generator-jhipster-quota": "1.0.3",
-    "generator-jhipster-angular-material-integration": "1.0.17",
     "generator-jhipster-uaa-security-authority": "1.0.1",
     "generator-jhipster-administration-database": "1.0.4",
     "generator-jhipster-database-backup": "1.0.7",
     "generator-jhipster-feign-client": "1.0.6",
+    "generator-jhipster-jgitver": "0.1.0",
     "generator-jhipster-obfuscation-at-rest": "0.3.0",
+    "generator-jhipster-social-login-api": "0.0.1",
+    "generator-jhipster-file2url": "0.0.0",
     "generator-jhipster": "6.4.1",
     "@openapitools/openapi-generator-cli": "0.0.14-4.0.2"
   },

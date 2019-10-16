@@ -68,5 +68,6 @@
     "entityTableName": "asset_acquisition",
     "databaseType": "sql",
     "jpaMetamodelFiltering": true,
-    "pagination": "pagination"
+    "pagination": "pagination",
+    "microserviceName": "fixedAssetService"
 }

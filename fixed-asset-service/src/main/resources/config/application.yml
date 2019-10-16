@@ -24,8 +24,8 @@ eureka:
     instance-info-replication-interval-seconds: 10
     registry-fetch-interval-seconds: 10
   instance:
-    appname: fixedassets
-    instanceId: fixedassets:${spring.application.instance-id:${random.value}}
+    appname: fixedassetservice
+    instanceId: fixedassetservice:${spring.application.instance-id:${random.value}}
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
     status-page-url-path: ${management.endpoints.web.base-path}/info
@@ -106,7 +106,7 @@ spring:
   autoconfigure:
     exclude: org.springframework.boot.actuate.autoconfigure.metrics.jdbc.DataSourcePoolMetricsAutoConfiguration,org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchAutoConfiguration,org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataAutoConfiguration
   application:
-    name: fixedAssets
+    name: fixedAssetService
   jmx:
     enabled: false
   data:
@@ -131,13 +131,13 @@ spring:
       enabled: false
   task:
     execution:
-      thread-name-prefix: fixed-assets-task-
+      thread-name-prefix: fixed-asset-service-task-
       pool:
         core-size: 2
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: fixed-assets-scheduling-
+      thread-name-prefix: fixed-asset-service-scheduling-
       pool:
         size: 2
   thymeleaf:
@@ -176,7 +176,7 @@ info:
 
 jhipster:
   clientApp:
-    name: 'fixedAssetsApp'
+    name: 'fixedAssetServiceApp'
   # By default CORS is disabled. Uncomment to enable.
   # cors:
   #     allowed-origins: "*"
@@ -186,11 +186,11 @@ jhipster:
   #     allow-credentials: true
   #     max-age: 1800
   mail:
-    from: fixedAssets@localhost
+    from: fixedAssetService@localhost
   swagger:
     default-include-pattern: /api/.*
-    title: fixedAssets API
-    description: fixedAssets API documentation
+    title: fixedAssetService API
+    description: fixedAssetService API documentation
     version: 0.0.1
     terms-of-service-url:
     contact-name:
@@ -203,7 +203,7 @@ kafka:
     key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
     value.deserializer: org.apache.kafka.common.serialization.StringDeserializer
     bootstrap.servers: localhost:9092
-    group.id: fixed-assets
+    group.id: fixed-asset-service
     auto.offset.reset: earliest
   producer:
     key.serializer: org.apache.kafka.common.serialization.StringSerializer

@@ -39,7 +39,7 @@ public class ServiceOutletResource {
 
     private final Logger log = LoggerFactory.getLogger(ServiceOutletResource.class);
 
-    private static final String ENTITY_NAME = "fixedAssetsServiceOutlet";
+    private static final String ENTITY_NAME = "fixedAssetServiceServiceOutlet";
 
     @Value("${jhipster.clientApp.name}")
     private String applicationName;

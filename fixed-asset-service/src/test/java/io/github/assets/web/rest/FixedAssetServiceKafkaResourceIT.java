@@ -1,9 +1,9 @@
 package io.github.assets.web.rest;
 
-import io.github.assets.FixedAssetsApp;
+import io.github.assets.FixedAssetServiceApp;
 import io.github.assets.config.SecurityBeanOverrideConfiguration;
-import io.github.assets.service.FixedAssetsKafkaProducer;
-import io.github.assets.service.FixedAssetsKafkaConsumer;
+import io.github.assets.service.FixedAssetServiceKafkaProducer;
+import io.github.assets.service.FixedAssetServiceKafkaConsumer;
 import org.apache.kafka.common.Metric;
 import org.apache.kafka.common.MetricName;
 import org.assertj.core.api.Assertions;
@@ -22,9 +22,9 @@ import java.util.Map;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@SpringBootTest(classes = {SecurityBeanOverrideConfiguration.class, FixedAssetsApp.class})
+@SpringBootTest(classes = {SecurityBeanOverrideConfiguration.class, FixedAssetServiceApp.class})
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_CLASS)
-public class FixedAssetsKafkaResourceIT {
+public class FixedAssetServiceKafkaResourceIT {
 
     private MockMvc restMockMvc;
 
@@ -33,10 +33,10 @@ public class FixedAssetsKafkaResourceIT {
     private static KafkaContainer kafkaContainer;
 
     @Autowired
-    private FixedAssetsKafkaProducer producer;
+    private FixedAssetServiceKafkaProducer producer;
 
     @Autowired
-    private FixedAssetsKafkaConsumer consumer;
+    private FixedAssetServiceKafkaConsumer consumer;
 
     private static final int MAX_ATTEMPT = 5;
 
@@ -56,7 +56,7 @@ public class FixedAssetsKafkaResourceIT {
 
     @BeforeEach
     public void setup() {
-        FixedAssetsKafkaResource kafkaResource = new FixedAssetsKafkaResource(producer);
+        FixedAssetServiceKafkaResource kafkaResource = new FixedAssetServiceKafkaResource(producer);
 
         this.restMockMvc = MockMvcBuilders.standaloneSetup(kafkaResource)
             .build();
@@ -67,7 +67,7 @@ public class FixedAssetsKafkaResourceIT {
 
     @Test
     public void producedMessageHasBeenConsumed() throws Exception {
-        restMockMvc.perform(post("/api/fixed-assets-kafka/publish?message=test"))
+        restMockMvc.perform(post("/api/fixed-asset-service-kafka/publish?message=test"))
             .andExpect(status().isOk());
 
         Map<MetricName, ? extends Metric> metrics = consumer.getKafkaConsumer().metrics();

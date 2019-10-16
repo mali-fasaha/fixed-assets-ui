@@ -39,7 +39,7 @@ public class AssetTransactionResource {
 
     private final Logger log = LoggerFactory.getLogger(AssetTransactionResource.class);
 
-    private static final String ENTITY_NAME = "fixedAssetsAssetTransaction";
+    private static final String ENTITY_NAME = "fixedAssetServiceAssetTransaction";
 
     @Value("${jhipster.clientApp.name}")
     private String applicationName;

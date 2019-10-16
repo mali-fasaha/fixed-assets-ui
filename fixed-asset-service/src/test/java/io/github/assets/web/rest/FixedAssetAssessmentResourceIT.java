@@ -1,6 +1,6 @@
 package io.github.assets.web.rest;
 
-import io.github.assets.FixedAssetsApp;
+import io.github.assets.FixedAssetServiceApp;
 import io.github.assets.config.SecurityBeanOverrideConfiguration;
 import io.github.assets.domain.FixedAssetAssessment;
 import io.github.assets.repository.FixedAssetAssessmentRepository;
@@ -47,7 +47,7 @@ import io.github.assets.domain.enumeration.AssetCondition;
 /**
  * Integration tests for the {@link FixedAssetAssessmentResource} REST controller.
  */
-@SpringBootTest(classes = {SecurityBeanOverrideConfiguration.class, FixedAssetsApp.class})
+@SpringBootTest(classes = {SecurityBeanOverrideConfiguration.class, FixedAssetServiceApp.class})
 public class FixedAssetAssessmentResourceIT {
 
     private static final String DEFAULT_DESCRIPTION = "AAAAAAAAAA";
