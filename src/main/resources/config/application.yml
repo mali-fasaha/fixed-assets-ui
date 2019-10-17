@@ -187,15 +187,15 @@ jhipster:
     from: fixedAssets@localhost
   swagger:
     default-include-pattern: /api/.*
-    title: fixedAssets API
-    description: fixedAssets API documentation
+    title: Fixed Assets Gateway API
+    description: Fixed Assets Gateway API documentation
     version: 0.0.1
-    terms-of-service-url:
-    contact-name:
-    contact-url:
-    contact-email:
-    license:
-    license-url:
+    terms-of-service-url: https://www.gnu.org/licenses/gpl-3.0.txt
+    contact-name: Edwin Njeru
+    contact-url: https://github.com/ghacupha
+    contact-email: mailnjeru@gmail.com
+    license: GPL version 3
+    license-url: https://www.gnu.org/licenses/gpl-3.0.txt
 kafka:
   consumer:
     key.deserializer: org.apache.kafka.common.serialization.StringDeserializer

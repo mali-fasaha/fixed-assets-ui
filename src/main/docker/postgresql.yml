@@ -2,10 +2,11 @@ version: '2'
 services:
   fixedassets-postgresql:
     image: postgres:11.5
-    # volumes:
-    #     - ~/volumes/jhipster/fixedAssets/postgresql/:/var/lib/postgresql/data/
+    volumes:
+      - ~/volumes/jhipster/fixedAssets/postgresql/:/var/lib/postgresql/fixedAssetsUIdata/
     environment:
-      - POSTGRES_USER=fixedAssets
-      - POSTGRES_PASSWORD=
+      - POSTGRES_USER=${PG_DATABASE_DEV_USER}
+      - POSTGRES_PASSWORD=${PG_DATABASE_DEV_PASSWORD}
+      - POSTGRES_DB=fixedAssets
     ports:
-      - 5432:5432
+      - 12010:5432

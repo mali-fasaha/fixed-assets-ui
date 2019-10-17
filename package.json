@@ -1,9 +1,9 @@
 {
-  "name": "fixed-assets",
-  "version": "0.0.1-SNAPSHOT",
-  "description": "Description for fixedAssets",
+  "name": "Fixed-assets",
+  "version": "0.0.1",
+  "description": "Fixed Assets Application Gateway and UI",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "GPLv3",
   "cacheDirectories": [
     "node_modules"
   ],
