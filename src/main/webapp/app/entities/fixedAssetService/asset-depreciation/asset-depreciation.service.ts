@@ -15,8 +15,8 @@ type EntityArrayResponseType = HttpResponse<IAssetDepreciation[]>;
 
 @Injectable({ providedIn: 'root' })
 export class AssetDepreciationService {
-  public resourceUrl = SERVER_API_URL + 'services/fixedassetservice/api/asset-depreciations';
-  public resourceSearchUrl = SERVER_API_URL + 'services/fixedassetservice/api/_search/asset-depreciations';
+  public resourceUrl = SERVER_API_URL + 'services/fixedassetservice/api/app/asset-depreciations';
+  public resourceSearchUrl = SERVER_API_URL + 'services/fixedassetservice/api/app/_search/asset-depreciations';
 
   constructor(protected http: HttpClient) {}
 
